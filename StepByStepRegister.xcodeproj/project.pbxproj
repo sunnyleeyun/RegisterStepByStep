@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					048F30FE1E433ECB007B579D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VJGEDW5SA9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VJGEDW5SA9;
 				INFOPLIST_FILE = StepByStepRegister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnylee945.StepByStepRegister;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VJGEDW5SA9;
 				INFOPLIST_FILE = StepByStepRegister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunnylee945.StepByStepRegister;
