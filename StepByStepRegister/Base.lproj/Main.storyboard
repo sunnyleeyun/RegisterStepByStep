@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AK4-2l-vFO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewControllerID" id="BYZ-38-t0r" customClass="LogInViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -61,11 +61,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm View Controller-->
         <scene sceneID="rGz-pS-QU9">
             <objects>
-                <viewController id="Abr-q5-pXu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmViewControllerID" id="Abr-q5-pXu" customClass="ConfirmViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7VW-PQ-SK5"/>
                         <viewControllerLayoutGuide type="bottom" id="ofB-1A-J3i"/>
@@ -163,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="33" y="768"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Data View Controller-->
         <scene sceneID="Nc7-wO-xwv">
             <objects>
-                <viewController id="BvR-qf-C0U" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeDataViewControllerID" id="BvR-qf-C0U" customClass="ChangeDataViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Yl-n2-XVK"/>
                         <viewControllerLayoutGuide type="bottom" id="U3u-1k-wDN"/>
@@ -223,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="821" y="773"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Vac-Nt-eSp">
             <objects>
-                <viewController id="AK4-2l-vFO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewControllerID" id="AK4-2l-vFO" customClass="SignUpViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ffH-2G-HWO"/>
                         <viewControllerLayoutGuide type="bottom" id="a4z-xS-Fik"/>
@@ -323,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDs-h9-Zir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="45"/>
+            <point key="canvasLocation" x="986" y="47"/>
         </scene>
     </scenes>
     <resources>
