@@ -46,6 +46,9 @@
                                 <state key="normal" title="註冊">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignUp_Button_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A5R-1E-NaH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-YC-3RD">
                                 <rect key="frame" x="201" y="490" width="90" height="90"/>
@@ -54,10 +57,17 @@
                                 <state key="normal" title="登入">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogIn_Button_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fbv-Z7-6Y6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="Email" destination="IwE-G7-Dh0" id="qO2-2y-kgg"/>
+                        <outlet property="Password" destination="4Ym-0L-jfp" id="SdK-R1-gvb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +89,9 @@
                                 <rect key="frame" x="141" y="206" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="檢視註冊資料"/>
+                                <connections>
+                                    <action selector="viewDetail:" destination="Abr-q5-pXu" eventType="touchUpInside" id="bBP-gX-RMA"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-74-uKL">
                                 <rect key="frame" x="54" y="559" width="149" height="59"/>
@@ -87,6 +100,9 @@
                                 <state key="normal" title="修改個人資料">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="changePersonInfo:" destination="Abr-q5-pXu" eventType="touchUpInside" id="OrY-bI-zNq"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-6S-kYs">
                                 <rect key="frame" x="67" y="48" width="240" height="128"/>
@@ -155,10 +171,25 @@
                                 <state key="normal" title="登出">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOut:" destination="Abr-q5-pXu" eventType="touchUpInside" id="Hcy-WV-odv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="changePersonalInfo" destination="h7H-74-uKL" id="1CH-be-63T"/>
+                        <outlet property="emailL" destination="FYu-fa-1sT" id="2jV-JJ-nbC"/>
+                        <outlet property="email_check" destination="f6Q-Ag-rrk" id="k2Y-IL-BCu"/>
+                        <outlet property="genderL" destination="QBh-uC-loR" id="6pW-Oe-6Df"/>
+                        <outlet property="gender_check" destination="a20-iu-y7g" id="hlG-LE-Waw"/>
+                        <outlet property="logOut" destination="Y8t-fd-LSh" id="qGJ-ch-u1A"/>
+                        <outlet property="nameL" destination="bcX-fp-837" id="Mag-VV-Mqm"/>
+                        <outlet property="name_chack" destination="llP-7j-L5t" id="xrM-X8-xun"/>
+                        <outlet property="phoneL" destination="JmQ-Gw-NeV" id="mFO-Y0-7UN"/>
+                        <outlet property="phone_check" destination="hdJ-QU-nTv" id="Kfz-u1-7r7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DC-lu-voG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,10 +246,19 @@
                                 <rect key="frame" x="149" y="560" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="儲存並返回"/>
+                                <connections>
+                                    <action selector="save:" destination="BvR-qf-C0U" eventType="touchUpInside" id="UPd-fL-sti"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="dTp-HE-kUP" id="n9P-YI-xgp"/>
+                        <outlet property="gender" destination="hXL-LX-9rh" id="eFU-6o-XJz"/>
+                        <outlet property="name" destination="vEu-1x-Trm" id="Qes-yy-fjN"/>
+                        <outlet property="phone" destination="x6B-Op-GmA" id="QiT-Ut-4ME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-Qj-Wcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,10 +357,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="確定"/>
+                                <connections>
+                                    <action selector="Confirm_Button_Tapped:" destination="AK4-2l-vFO" eventType="touchUpInside" id="7PX-cw-xV1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Email" destination="aqB-Qe-CYI" id="rxG-TZ-eDW"/>
+                        <outlet property="Gender" destination="tXg-DM-oDr" id="Y6i-3h-dKA"/>
+                        <outlet property="Name" destination="OjT-j7-poL" id="FkB-Fo-OEn"/>
+                        <outlet property="Phone" destination="1fK-ut-U73" id="JUe-4r-Bz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDs-h9-Zir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

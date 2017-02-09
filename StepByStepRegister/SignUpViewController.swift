@@ -9,7 +9,15 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var Name: UITextField!
+    @IBOutlet weak var Gender: UITextField!
+    @IBOutlet weak var Email: UITextField!
+    @IBOutlet weak var Phone: UITextField!
+    
+    var uid = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +28,8 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func Confirm_Button_Tapped(_ sender: Any) {
+    }
 
 }
 
