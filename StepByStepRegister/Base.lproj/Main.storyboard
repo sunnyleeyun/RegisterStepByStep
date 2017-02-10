@@ -186,7 +186,7 @@
                         <outlet property="gender_check" destination="a20-iu-y7g" id="hlG-LE-Waw"/>
                         <outlet property="logOut" destination="Y8t-fd-LSh" id="qGJ-ch-u1A"/>
                         <outlet property="nameL" destination="bcX-fp-837" id="Mag-VV-Mqm"/>
-                        <outlet property="name_chack" destination="llP-7j-L5t" id="xrM-X8-xun"/>
+                        <outlet property="name_check" destination="llP-7j-L5t" id="vDb-1y-ZxX"/>
                         <outlet property="phoneL" destination="JmQ-Gw-NeV" id="mFO-Y0-7UN"/>
                         <outlet property="phone_check" destination="hdJ-QU-nTv" id="Kfz-u1-7r7"/>
                     </connections>

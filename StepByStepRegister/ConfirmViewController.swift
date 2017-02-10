@@ -10,7 +10,7 @@ import UIKit
 
 class ConfirmViewController: UIViewController {
     
-    @IBOutlet weak var name_chack: UILabel!
+    @IBOutlet weak var name_check: UILabel!
     @IBOutlet weak var gender_check: UILabel!
     @IBOutlet weak var email_check: UILabel!
     @IBOutlet weak var phone_check: UILabel!
