@@ -2,9 +2,10 @@
 
 內容代碼
 
-LogInViewController
 
+## LogInViewController ##
 
+```
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -75,11 +76,13 @@ class LogInViewController: UIViewController {
     
 }
 
+```
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-SignUpViewController
+## SignUpViewController ##
 
+```
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -128,13 +131,14 @@ class SignUpViewController: UIViewController {
     
     
 }
-
+```
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 
-ConfirmViewController
+## ConfirmViewController ##
 
+```
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -241,12 +245,14 @@ class ConfirmViewController: UIViewController {
     
 }
 
+```
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 
-ChangeDataViewController
- 
+## ChangeDataViewController ##
+ 
+```
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -322,3 +328,4 @@ class ChangeDataViewController: UIViewController {
     
     
 }
+```
