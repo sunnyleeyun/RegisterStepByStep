@@ -1,7 +1,14 @@
 # RegisterStepByStep
 
-內容代碼
+這是個初始範例版本，而代碼位於此README下方，
+[id1]: http://sunnylee945.wixsite.com/leeyun/blog
+請按照[Firebase:用Swift建立註冊系統][id1] 完成所有步驟，
+[id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
+即可得[完整版][id2]。
 
+
+
+Demo影片如此連結：
 [![Demo](https://i.ytimg.com/vi/7EtMUehTNto/1.jpg?time=1486976666492)](https://www.youtube.com/watch?v=7EtMUehTNto)
 
 
