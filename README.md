@@ -13,6 +13,7 @@ This is an initial version. The detail source code is in this README file below.
 Please follow the steps of the blog [Firebase:用Swift建立註冊系統][id3].
 [id4]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
 Then we can get the [final version][id4].
+
 ---------------------------------------
 
 
