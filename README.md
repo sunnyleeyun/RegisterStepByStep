@@ -6,9 +6,15 @@
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
 即可得[完整版][id2]。
 
+This is an initial version. The detail source code is in this README file below.
+[id3]: http://sunnylee945.wixsite.com/leeyun/blog
+Please follow the steps of the blog [Firebase:用Swift建立註冊系統][id3].
+[id4]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
+Then we can get the [final version][id4].
 
 
-Demo影片如此連結：
+#### Demo影片以下圖示： ####
+#### Demo As Below Picture: ####
 [![Demo](https://i.ytimg.com/vi/7EtMUehTNto/1.jpg?time=1486976666492)](https://www.youtube.com/watch?v=7EtMUehTNto)
 
 
