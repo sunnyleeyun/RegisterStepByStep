@@ -2,6 +2,9 @@
 
 內容代碼
 
+[![ScreenShot](https://www.youtube.com/watch?v=7EtMUehTNto.png)](https://www.youtube.com/watch?v=7EtMUehTNto)
+
+
 
 ## LogInViewController ##
 
