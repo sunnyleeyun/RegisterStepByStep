@@ -97,7 +97,7 @@ class LogInViewController: UIViewController {
 
 ```
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+---------------------------------------
 
 ## SignUpViewController ##
 
@@ -152,7 +152,7 @@ class SignUpViewController: UIViewController {
 }
 ```
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+---------------------------------------
 
 
 ## ConfirmViewController ##
@@ -266,7 +266,7 @@ class ConfirmViewController: UIViewController {
 
 ```
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+---------------------------------------
 
 
 ## ChangeDataViewController ##
