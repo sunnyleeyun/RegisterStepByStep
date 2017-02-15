@@ -20,6 +20,16 @@ Then we can get the [final version][id4].
 #### Demo ####
 [![Demo](https://i.ytimg.com/vi/7EtMUehTNto/1.jpg?time=1486976666492)](https://www.youtube.com/watch?v=7EtMUehTNto)
 
+---------------------------------------
+
+## 特定解釋 ##
+
+總共有四個 ViewController 
+
+
+
+1. uid 是類似「身分證字號」或「獨特編碼」，就像每個人都有屬於自己的指紋，每個帳號都有屬於自己的編號，不會有兩個帳號重複
+
 
 
 ## LogInViewController ##
@@ -178,8 +188,7 @@ class ConfirmViewController: UIViewController {
     
     @IBOutlet weak var logOut: UIButton!
     
-    
-    var uid = ""
+    var uid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -284,13 +293,21 @@ class ChangeDataViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var phone: UITextField!
     
-    var uid = ""
+    
+    // 先假設
+    var uid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if let user = FIRAuth.auth()?.currentUser {
+            
+            // 等號前面的 uid 是指 
+            
             uid = user.uid
         }
+        
         
         var ref: FIRDatabaseReference!
         
