@@ -1,15 +1,21 @@
 # RegisterStepByStep
 
 這是個初始範例版本，而代碼位於此README下方，
+
 [id1]: http://sunnylee945.wixsite.com/leeyun/blog
-請按照[Firebase : 用Swift建立註冊系統][id1] 完成所有步驟，
+請按照 [Firebase : 用Swift建立註冊系統][id1] 完成所有步驟，
+
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
 即可得[完整版][id2]。
 
 ---------------------------------------
 
-This is an initial version. The detail source code is in this README file below.
-Please follow the steps of the blog [Firebase : 用Swift建立註冊系統][id1].
+This is an initial version. 
+
+The detail source code is in this README file below.
+
+Please follow the steps from the blog [Firebase : 用Swift建立註冊系統][id1].
+
 Then we can get the [final version][id2].
 
 ---------------------------------------
@@ -22,9 +28,9 @@ Then we can get the [final version][id2].
 
 ## 特定解釋 ##
 
-Firebase與App的連結，請至[Firebase : 用Swift建立註冊系統][id1]，有詳盡說明，以下單純就程式碼進行解釋。
+Firebase與App的連結，請至[Firebase : 用Swift建立註冊系統][id1]，有詳盡步驟說明，以下只有單純就程式碼進行解釋喔！
 
-總共有四個 ViewController : LogInViewController、SignUpViewController、ConfirmViewController、ChangeDataViewController
+StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUpViewController、ConfirmViewController、ChangeDataViewController。
 
 1. uid 是類似「身分證字號」或「獨特編碼」，就像每個人都有屬於自己的指紋，每個帳號都有屬於自己的編號，不會有兩個帳號重複
 
