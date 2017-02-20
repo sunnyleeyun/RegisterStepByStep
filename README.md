@@ -118,16 +118,23 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 ```
 import UIKit
 import Firebase
-import FirebaseAuth
+import FirebaseAuth //這邊的Auth，是指Authentication，「新增使用者UID」或是「從Auth獲取使用者UID」需要用到這個部分
+
 
 class LogInViewController: UIViewController {
     
     
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
-    
-    var uid = ""
-    
+    
+    // uid 是「使用者的獨特編碼」，在這邊儲存成一個 ""（空白的值）的 String，這樣聽起來有點饒舌，在這個地方設立變數，讓變數可以被任何func取用
+    // 比如說：某使用者UID是 "Avdfu12ejsiod9"，在Fuc SignUp_Button_Tapped 或 LogIn_Button_Tapped 的 self.uid = user.uid
+    // 前者 uid 即是指 「var uid = ""」的 uid，而後者的 uid 是指 「Firebase - Auth 的 使用者UID」
+    // 意思就是「將 Firebase-Auth 的 使用者UID」 儲存在 「var uid」中，因為 var 代表「變數」，最終就變成 var uid = "Avdfu12ejsiod9"
+    // 這樣，在我們需要使用者UID的時候（不論「從Firebase拿取資料」或是「從手機將資料放置到Firebase」皆需要用到這個 uid ）就可以輕易使用了！
+    var uid = ""
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
