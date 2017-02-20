@@ -58,7 +58,8 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 
 ![login](https://cloud.githubusercontent.com/assets/20850892/23013396/5d23545c-f465-11e6-8719-762496b3a10e.png)
 ![signup](https://cloud.githubusercontent.com/assets/20850892/23013399/5e9c7db8-f465-11e6-8fb2-db31650515a2.png)
-
+![confirm](https://cloud.githubusercontent.com/assets/20850892/23013400/6059c246-f465-11e6-8027-2bb3d2bfe5cd.png)
+![changedata](https://cloud.githubusercontent.com/assets/20850892/23013401/61a95f6c-f465-11e6-8b1f-ecc84dc1b53a.png)
 
 [id3]:https://youtu.be/KiMFQju_L4g
 [id4]:https://youtu.be/5ns3Xf3aVik
@@ -77,13 +78,6 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 4. 確認 Button：利用「程式碼」前往 LogInViewController。
 
 5. 登入 Button：先輸入(1)的信箱、密碼，按下「登入」按鈕前往確認頁面，利用「程式碼」前往 ConfirmViewController。
-
-
-
-
-
-![confirm](https://cloud.githubusercontent.com/assets/20850892/23013400/6059c246-f465-11e6-8027-2bb3d2bfe5cd.png)
-![changedata](https://cloud.githubusercontent.com/assets/20850892/23013401/61a95f6c-f465-11e6-8b1f-ecc84dc1b53a.png)
 
 6. 檢視註冊資料 Button：到了確認頁面，看到最上面的 Success 圖樣，就代表登入成功了！原本虛線範圍是隱藏的，按下按鈕就會出現先前的註冊資料。
 
