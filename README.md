@@ -63,12 +63,13 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 [id3]:https://youtu.be/KiMFQju_L4g
 [id4]:https://youtu.be/5ns3Xf3aVik
 [id5]:https://youtu.be/9goPgGhfCOg
+[id6]:https://youtu.be/eqnrYgBifvY
 
 1. 信箱 & 密碼 Text Field：不能為空值，才能按下註冊或登入按鈕。
-⋅⋅* 按下註冊按鈕的同時，在Firebase-Authentication上成立一個新的使用者，同時在Firebase-Database中以Safety-Check: "ON"為 value新增此使用者的UID（Ｑ＆Ａ有說明何為UID），[影片解釋][id3]，這也是我們前面所說要學會的三件事中的第一件事。
+⋅⋅* 按下註冊按鈕的同時，在Firebase-Authentication上成立一個新的使用者，同時在 Firebase-Database 中以 Safety-Check: "ON" 作為 value 新增此使用者的UID（Ｑ＆Ａ有說明何為UID），[影片解釋][id3]，這也是我們前面所說要學會的三件事中的第一件事。
 ⋅⋅* 按下登入按鈕的同時，Firebase會確認這個帳號與密碼是否正確，若確認無誤，才會做下一個動作，前往下一頁。
 
-2. 註冊 Button：利用「程式碼」前往 SignUpViewController。
+2. 註冊 Button：利用「程式碼」前往 SignUpViewController（Ｑ＆Ａ有解釋為何要用程式碼前往）。
 
 3. 姓名、性別、信箱、電話 Text Field：不得為空值，才能按下確認按鈕，按下確認按鈕的同時，將姓名、性別、信箱、電話的資訊儲存至Firebase。
 ⋅⋅* 這個步驟，讓App裡面的資訊，成功放置到 Firebase-Database 中，如[影片][id4]，這是一個很重要功能，也是前面所說的第二件必學。
@@ -95,7 +96,8 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 
 10. 確認並返回 Button：利用「程式碼」前往 ConfirmViewController，再檢視看看剛剛編輯的資料，已經即時更新了。
 
-11. 登出 Button：
+11. 登出 Button：如[影片][id6]，Firebase 中 Online-Status 隨著實際登入狀況改變，除此之外，Firebase 也可以像影片一樣直接改變資訊，即時更新到手機上。
+
 
 
 
@@ -114,7 +116,8 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 ## LogInViewController ##
 
 ```
-import UIKiimport Firebase
+import UIKit
+import Firebase
 import FirebaseAuth
 
 class LogInViewController: UIViewController {
