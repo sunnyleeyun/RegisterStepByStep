@@ -1,25 +1,7 @@
 # RegisterStepByStep
 
-
-這是個初始範例版本，而代碼位於此README下方，
-
 [id1]: http://sunnylee945.wixsite.com/leeyun/single-post/2017/02/21/Firebase%EF%BC%9A%E7%94%A8-Swift-%E5%BB%BA%E7%AB%8B%E3%80%8C%E8%A8%BB%E5%86%8A%E3%80%8D%E7%B3%BB%E7%B5%B1
-請按照 [Firebase : 用Swift建立註冊系統][id1] 完成所有步驟，
-
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal.zip
-即可得[完整版][id2]（點選下載zip檔）。
-
-##
-
-This is an initial version. 
-
-The detail source code is in this README file below.
-
-Please follow the steps from the blog [Firebase : 用Swift建立註冊系統][id1].
-
-Eventually, we will get the [final version][id2](Click to download).
-
----------------------------------------
 
 
 #### Demo ####
