@@ -67,9 +67,7 @@ StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUp
 [id6]:https://youtu.be/eqnrYgBifvY
 
 1. 信箱 & 密碼 Text Field：不能為空值，才能按下註冊或登入按鈕。
-
 ⋅⋅* 按下註冊按鈕的同時，在Firebase-Authentication上成立一個新的使用者，同時在 Firebase-Database 中以 Safety-Check: "ON" 作為 value 新增此使用者的UID（Ｑ＆Ａ有說明何為UID），[影片解釋][id3]，這也是我們前面所說要學會的三件事中的第一件事。
-
 ⋅⋅* 按下登入按鈕的同時，Firebase會確認這個帳號與密碼是否正確，若確認無誤，才會做下一個動作，前往下一頁。
 
 2. 註冊 Button：利用「程式碼」前往 SignUpViewController（Ｑ＆Ａ有解釋為何要用程式碼前往）。
