@@ -34,12 +34,12 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
     
-// uid 是「使用者的獨特編碼」，在這邊儲存成一個 "" ，沒有任何值的 String，這樣聽起來有點饒舌
-// 比如說：某使用者UID是 "Avdfu12ejsiod9"<隨便亂取>，在 SignUp_Button_Tapped 或 LogIn_Button_Tapped 
-// 有一串程式碼是 「self.uid = user.uid」
-// 前者 uid 即是指 「var uid = ""」的 uid，而後者的 uid 是指 「Firebase - Auth 的 使用者UID」
-// 意思就是「將Firebase使用者uid儲存愛變數uid中」，因為 var 代表「變數」，最終就變成 var uid = "Avdfu12ejsiod9"
-// 這樣，在我們需要使用者UID的時候（不論「從Firebase拿取資料」或是「從手機將資料放置到Firebase」皆需要用到）就可以輕易使用了！
+    // uid 是「使用者的獨特編碼」，在這邊儲存成一個 "" ，沒有任何值的 String，這樣聽起來有點饒舌
+    // 比如說：某使用者UID是 "Avdfu12ejsiod9"<隨便亂取>，在 SignUp_Button_Tapped 或 LogIn_Button_Tapped 
+    // 有一串程式碼是 「self.uid = user.uid」
+    // 前者 uid 即是指 「var uid = ""」的 uid，而後者的 uid 是指 「Firebase - Auth 的 使用者UID」
+    // 意思就是「將Firebase使用者uid儲存愛變數uid中」，因為 var 代表「變數」，最終就變成 var uid = "Avdfu12ejsiod9"
+    // 這樣，在我們需要使用者UID的時候（不論「從Firebase拿取資料」或是「從手機將資料放置到Firebase」皆需要用到）就可以輕易使用了！
     var uid = ""
 
 
@@ -63,9 +63,12 @@ class LogInViewController: UIViewController {
         if self.Email.text != "" || self.Password.text != ""{
         
         
-            // 接下來，FIRAuth.auth().createUser，這邊就是「新增使用者」，在步驟三的前半段，有先啟用電子郵件/密碼，所以這邊會有 withEmail, password
-            // 另外提醒，順著打程式碼會出現->FIRAuth.auth()?.createUser(withEmail: String, password: String, completion: FIRAuthResultCallback?)，
-            // 那怎麼變成 completion: { (user, error) in 這樣的呢？其實很簡單，只要在藍藍的 FIRAuthResultCallback? 按個 enter(return) 鍵，就會變成這樣囉
+            // 接下來，FIRAuth.auth().createUser，這邊就是「新增使用者」，
+            // 部落格中在步驟三的前半段，有先啟用電子郵件/密碼，所以這邊會有 withEmail, password
+            // 另外提醒，順著打程式碼會出現
+            // FIRAuth.auth()?.createUser(withEmail: String, password: String, completion: FIRAuthResultCallback?)，
+            // 那怎麼變成 completion: { (user, error) in 這樣的呢？
+            // 其實很簡單，只要在藍藍的 FIRAuthResultCallback? 按個 enter(return) 鍵，就會變成這樣囉
             FIRAuth.auth()?.createUser(withEmail: self.Email.text!, password: self.Password.text!, completion: { (user, error) in
                 
                 if error == nil { 
@@ -253,13 +256,14 @@ class ConfirmViewController: UIViewController {
         // .observe 顧名思義就是「察看」的意思，也就是說ref.observe(.value)->查看「這串導引到特定位置的路徑」的value
         // snapshot只是一個代稱(習慣為snapshot)，通常搭配.value，是指「這串路徑下的值」
         ref.observe(.value, with: { (snapshot) in  
-            let name = snapshot.value as! String  // 假設 name 是這串路徑下的值，as! String 是因為下一行程式碼self.name_check.text為label，因此必須為String
+            let name = snapshot.value as! String  // 假設 name 是這串路徑下的值，
+                                                  // as! String 是因為下一行程式碼self.name_check.text為label，因此必須為String
             self.name_check.text = name  // self.name_check.text這個label為上一行程式碼所假設的 name
-            self.name_check.isHidden = false  // 再把原本隱藏的顯示出來就好囉
+            self.name_check.isHidden = false  // 再把原本隱藏的顯示出來
         })
         
         
-        // 下面就都一樣的意思囉！
+        // 下面就都一樣的意思，只是換成Gender、Email、Phone
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Gender")
         ref.observe(.value, with: { (snapshot) in
             let gender = snapshot.value as! String
@@ -348,11 +352,11 @@ class ChangeDataViewController: UIViewController {
             uid = user.uid
         }
         
-        // 設立變數，儲存路徑
+        // 設立變數，把路徑儲存在var
         var ref: FIRDatabaseReference!
         
-        // 接下來這些與 ConfirmViewController 裡面的 viewDetail 一樣，從Firebase拿取資料，
-        // 這次是在viewDidLoad先做這個動作，也就是在這個頁面還未跑起來時就已經從Firebase抓取資料，並顯示在 Text Field 裡面，但方式是一模一樣的
+        // 接下來這些與 ConfirmViewController 裡面的 viewDetail 一樣，從Firebase拿取資料，這次是在viewDidLoad先做這個動作
+        // 也就是在這個頁面還未跑起來時就已經從Firebase抓取資料，並顯示在 Text Field 裡面，但方式是一模一樣的
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         ref.observe(.value, with: { (snapshot) in
             let name = snapshot.value as! String
@@ -425,4 +429,4 @@ class ChangeDataViewController: UIViewController {
 3. 從Firebase拿取資料到App(ConfirmViewController、ChangeDataViewController)
 
 
-## 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，也歡迎分享，教學相長！ ##
+## 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，教學相長！ ##
