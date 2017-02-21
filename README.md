@@ -332,20 +332,22 @@ class ConfirmViewController: UIViewController {
         emailL.isHidden = false
         phoneL.isHidden = false
         
+        
         // 接下來也是很重要的一步，從Firebase拿取資料，並顯示為label(name, gender, email, phone)
         
         // 前面有個var ref，把這一串路徑除存在變數中
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         
         // .observe 顧名思義就是「察看」的意思，也就是說ref.observe(.value)->查看「這串導引到特定位置的路徑」的value
-        ref.observe(.value, with: { (snapshot) in  // snapshot只是一個代稱(習慣為snapshot)，通常搭配.value，是指「這串路徑下的值」
-            let name = snapshot.value as! String  // 假設 name 是這串路徑下的值，為 String 是因為下一行程式碼self.name_check.text為label，因此必須為String
+        // snapshot只是一個代稱(習慣為snapshot)，通常搭配.value，是指「這串路徑下的值」
+        ref.observe(.value, with: { (snapshot) in  
+            let name = snapshot.value as! String  // 假設 name 是這串路徑下的值，as! String 是因為下一行程式碼self.name_check.text為label，因此必須為String
             self.name_check.text = name  // self.name_check.text這個label為上一行程式碼所假設的 name
             self.name_check.isHidden = false  // 再把原本隱藏的顯示出來就好囉
         })
         
         
-        // 下面就都一樣囉！
+        // 下面就都一樣的意思囉！
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Gender")
         ref.observe(.value, with: { (snapshot) in
             let gender = snapshot.value as! String
@@ -367,13 +369,14 @@ class ConfirmViewController: UIViewController {
             self.phone_check.isHidden = false
         })
         
-        logOut.isHidden = false // logOut按鈕顯示
-        changePersonalInfo.isHidden = false // 
-        
+        logOut.isHidden = false // 登出Button顯示
+        changePersonalInfo.isHidden = false // 修改個人資料Button顯示
+        
 
     }
     
-    @IBAction func changePersonInfo(_ sender: Any) {
+    // 前往 ChangeDataViewController，一樣使用程式碼前往以避免Firebase延遲問題
+    @IBAction func changePersonInfo(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ChangeDataViewControllerID")as! ChangeDataViewController
@@ -381,14 +384,17 @@ class ConfirmViewController: UIViewController {
         
     }
     
-    
-    @IBAction func logOut(_ sender: Any) {
+    // 前往 LogInViewController，先在Firebase中登出，並返回到最一開始的頁面
+    @IBAction func logOut(_ sender: Any) {
         
         var ref = FIRDatabase.database().reference(withPath: "Online-Status/\(uid)")
+        // Database 的 Online-Status: "OFF"
         ref.setValue("OFF")
-        try!FIRAuth.auth()?.signOut()
+        // Authentication 也 SignOut
+        try!FIRAuth.auth()?.signOut()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // 前往LogIn頁面
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "LogInViewControllerID")as! LogInViewController
         self.present(nextVC,animated:true,completion:nil)
 
@@ -419,21 +425,22 @@ class ChangeDataViewController: UIViewController {
     @IBOutlet weak var phone: UITextField!
     
     
-    // 先假設
+    // LogInViewController 有詳細說明 uid ，這邊就不再重複了
     var uid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // 這裡即是 uid 所解釋的，將Firebase使用者uid儲存愛變數uid裡面，在viewDidLoad中取用一次，便可在這個viewController隨意使用
         if let user = FIRAuth.auth()?.currentUser {            
             uid = user.uid
         }
         
+        // 設立變數，儲存路徑
+        var ref: FIRDatabaseReference!
         
-        var ref: FIRDatabaseReference!
-        
-        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
+        // 接下來這些與 ConfirmViewController 裡面的 viewDetail 一樣，從Firebase拿取資料，這次是在viewDidLoad先做這個動作，也就是在這個頁面還未跑起來時就已經從Firebase抓取資料，並顯示在 Text Field 裡面，但方式是一模一樣的
+        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         ref.observe(.value, with: { (snapshot) in
             let name = snapshot.value as! String
             self.name.text = name
@@ -467,16 +474,18 @@ class ChangeDataViewController: UIViewController {
     }
     
     
-    @IBAction func save(_ sender: Any) {
+    // 前往ConfirmViewController，先儲存資料到Firebase，再行前往ConfirmVC檢視資料是不是即時改變了
+    @IBAction func save(_ sender: Any) {
         
-        if name.text != "" && gender.text != "" && email.text != "" && phone.text != "" {
+        // 首先確認所有 Text Field 裡面都有東西，再來就是老方法，setValue到Firebase就好囉！
+        if name.text != "" && gender.text != "" && email.text != "" && phone.text != "" {
             FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name").setValue(name.text)
             FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Gender").setValue(gender.text)
             FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Email").setValue(email.text)
             FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Phone").setValue(phone.text)
             
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // 前往ConfirmViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "ConfirmViewControllerID")as! ConfirmViewController
             self.present(nextVC,animated:true,completion:nil)
         }
@@ -487,3 +496,19 @@ class ChangeDataViewController: UIViewController {
     
 }
 ```
+---------------------------------------
+
+
+## 按照步驟，就可以製作出一個連接Firebase的註冊系統囉！ ##
+
+
+再回頭看一次，一開始所說的必學三件事都學會了沒：
+
+1. 在Firebase建立新帳號(LogInViewController)
+
+2. 從App存取資料到Firebase(SignUpViewController、ChangeDataViewController)
+
+3. 從Firebase拿取資料到App(ConfirmViewController、ChangeDataViewController)
+
+
+## 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，也歡迎分享，教學相長！ ##
