@@ -418,7 +418,7 @@ class ChangeDataViewController: UIViewController {
 
 ## 按照步驟，就可以製作出一個連接Firebase的註冊系統囉！ ##
 
-如果需要完整版，請點[此][id2]開始下載。
+如果需要完整版，請[點此][id2]開始下載。
 
 再回頭看一次，一開始所說的必學三件事都學會了沒：
 
