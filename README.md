@@ -5,8 +5,8 @@
 [id1]: http://sunnylee945.wixsite.com/leeyun/blog
 請按照 [Firebase : 用Swift建立註冊系統][id1] 完成所有步驟，
 
-[id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal
-即可得[完整版][id2]。
+[id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal.zip
+即可得[完整版][id2]（點選下載zip檔）。
 
 ---------------------------------------
 
@@ -16,7 +16,7 @@ The detail source code is in this README file below.
 
 Please follow the steps from the blog [Firebase : 用Swift建立註冊系統][id1].
 
-Then we can get the [final version][id2].
+Then we can get the [final version][id2](Click and start to download).
 
 ---------------------------------------
 
