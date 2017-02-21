@@ -26,85 +26,15 @@ Then we can get the [final version][id2].
 
 ---------------------------------------
 
-## 特定解釋 ##
 
-Firebase與App的連結，請至[Firebase : 用Swift建立註冊系統][id1]，有詳盡步驟說明，以下只有單純就程式碼進行解釋喔！
-
-StepByStepRegister 總共有四個 ViewController : LogInViewController、SignUpViewController、ConfirmViewController、ChangeDataViewController。
-
-
-
-圖片中會出現三種顏色的框與解釋：
-
-
-- 紅色：Text Field 或 Label，需「輸入資訊」或是「顯示訊息」。
-
-
-- 藍色：Button，主要是前往其他頁面。
-
-
-- 棕色：特定備註。
-
-
-我們要學會三件事：
-
-1. 在Firebase建立新帳號
-
-2. 從App存取資料到Firebase
-
-3. 從Firebase拿取資料到App
-
-
-
-![login](https://cloud.githubusercontent.com/assets/20850892/23013396/5d23545c-f465-11e6-8719-762496b3a10e.png)
-![signup](https://cloud.githubusercontent.com/assets/20850892/23013399/5e9c7db8-f465-11e6-8fb2-db31650515a2.png)
-![confirm](https://cloud.githubusercontent.com/assets/20850892/23013400/6059c246-f465-11e6-8027-2bb3d2bfe5cd.png)
-![changedata](https://cloud.githubusercontent.com/assets/20850892/23013401/61a95f6c-f465-11e6-8b1f-ecc84dc1b53a.png)
-
-[id3]:https://youtu.be/KiMFQju_L4g
-[id4]:https://youtu.be/5ns3Xf3aVik
-[id5]:https://youtu.be/9goPgGhfCOg
-[id6]:https://youtu.be/eqnrYgBifvY
-
-1. 信箱 & 密碼 Text Field：不能為空值，才能按下註冊或登入按鈕。
-⋅⋅* 按下註冊按鈕的同時，在Firebase-Authentication上成立一個新的使用者，同時在 Firebase-Database 中以 Safety-Check: "ON" 作為 value 新增此使用者的UID（Ｑ＆Ａ有說明何為UID），[影片解釋][id3]，這也是我們前面所說要學會的三件事中的第一件事。
-⋅⋅* 按下登入按鈕的同時，Firebase會確認這個帳號與密碼是否正確，若確認無誤，才會做下一個動作，前往下一頁。
-
-2. 註冊 Button：利用「程式碼」前往 SignUpViewController（Ｑ＆Ａ有解釋為何要用程式碼前往）。
-
-3. 姓名、性別、信箱、電話 Text Field：不得為空值，才能按下確認按鈕，按下確認按鈕的同時，將姓名、性別、信箱、電話的資訊儲存至Firebase。
-⋅⋅* 這個步驟，讓App裡面的資訊，成功放置到 Firebase-Database 中，如[影片][id4]，這是一個很重要功能，也是前面所說的第二件必學。
-
-4. 確認 Button：利用「程式碼」前往 LogInViewController。
-
-5. 登入 Button：先輸入(1)的信箱、密碼，按下「登入」按鈕前往確認頁面，利用「程式碼」前往 ConfirmViewController。
-
-6. 檢視註冊資料 Button：到了確認頁面，看到最上面的 Success 圖樣，就代表登入成功了！原本虛線範圍是隱藏的，按下按鈕就會出現先前的註冊資料。
-
-7. 姓名、性別、信箱、電話 Label：這裡就會顯現先前的註冊資料。
-⋅⋅* 這是第三個重要的功能，從 Firebase 中拿取資料！
-
-8. 修改個人資料 Button：利用「程式碼」前往 ChangeDataViewController。
-
-9. 姓名、性別、信箱、電話 Text Field：會先在 viewDidLoad 從 Firebase 拿取資料，如[影片][id5]，其中Text Field不得為空值，編輯完成後，點選儲存並返回按鈕。
-
-10. 確認並返回 Button：利用「程式碼」前往 ConfirmViewController，再檢視看看剛剛編輯的資料，已經即時更新了。
-
-11. 登出 Button：如[影片][id6]，Firebase 中 Online-Status 隨著實際登入狀況改變，除此之外，Firebase 也可以像影片一樣直接改變資訊，即時更新到手機上。
+## Firebase與App的連結，請至[Firebase : 用Swift建立註冊系統][id1]，有詳盡步驟說明，以下只有單純就程式碼進行解釋喔！ ##
 
 
 
 
-## Ｑ＆Ａ ##
-
-Ｑ：為什麼要由程式碼前往別的頁面，而不是直接在 MainStoryBoard 拉 Segue 就好了呢？
-
-Ａ：因為Firebase會延遲，按下確認鍵，將註冊的個人資料丟到Firebase上，這是需要幾秒鐘的時間，倘若直接Segue，資料還來不及送達Firebase，就已經到達下一個頁面，這就非常有可能造成Error了，所以提醒大家需要多多注意Firebase的延遲問題！
 
 
-Ｑ：什麼是uid呢？
-
-Ａ：uid 是類似「身分證字號」或「獨特編碼」，就像每個人都有屬於自己的指紋，每個帳號都有屬於自己的編號，可以在Firebase-Authentication中的使用者UID看到每個帳號獨特的UID。
+---------------------------------------
 
 
 ## LogInViewController ##
