@@ -1,6 +1,5 @@
 # RegisterStepByStep
 
----------------------------------------
 
 這是個初始範例版本，而代碼位於此README下方，
 
@@ -10,7 +9,7 @@
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal.zip
 即可得[完整版][id2]（點選下載zip檔）。
 
----------------------------------------
+##
 
 This is an initial version. 
 
