@@ -81,7 +81,8 @@ class LogInViewController: UIViewController {
         
         
             // 接下來，FIRAuth.auth().createUser，這邊就是「新增使用者」，在步驟三的前半段，有先啟用電子郵件/密碼，所以這邊會有 withEmail, password
-            // 另外提醒，順著打程式碼會出現->FIRAuth.auth()?.createUser(withEmail: String, password: String, completion: FIRAuthResultCallback?)，那怎麼變成 completion: { (user, error) in 這樣的呢？其實很簡單，只要在藍藍的 FIRAuthResultCallback? 按個 enter(return) 鍵，就會變成這樣囉
+            // 另外提醒，順著打程式碼會出現->FIRAuth.auth()?.createUser(withEmail: String, password: String, completion: FIRAuthResultCallback?)，
+            // 那怎麼變成 completion: { (user, error) in 這樣的呢？其實很簡單，只要在藍藍的 FIRAuthResultCallback? 按個 enter(return) 鍵，就會變成這樣囉
             FIRAuth.auth()?.createUser(withEmail: self.Email.text!, password: self.Password.text!, completion: { (user, error) in
                 
                 if error == nil { 
@@ -367,7 +368,8 @@ class ChangeDataViewController: UIViewController {
         // 設立變數，儲存路徑
         var ref: FIRDatabaseReference!
         
-        // 接下來這些與 ConfirmViewController 裡面的 viewDetail 一樣，從Firebase拿取資料，這次是在viewDidLoad先做這個動作，也就是在這個頁面還未跑起來時就已經從Firebase抓取資料，並顯示在 Text Field 裡面，但方式是一模一樣的
+        // 接下來這些與 ConfirmViewController 裡面的 viewDetail 一樣，從Firebase拿取資料，
+        // 這次是在viewDidLoad先做這個動作，也就是在這個頁面還未跑起來時就已經從Firebase抓取資料，並顯示在 Text Field 裡面，但方式是一模一樣的
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         ref.observe(.value, with: { (snapshot) in
             let name = snapshot.value as! String
