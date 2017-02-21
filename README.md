@@ -1,5 +1,7 @@
 # RegisterStepByStep
 
+---------------------------------------
+
 這是個初始範例版本，而代碼位於此README下方，
 
 [id1]: http://sunnylee945.wixsite.com/leeyun/blog
