@@ -34,11 +34,12 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var Password: UITextField!
     
-    // uid 是「使用者的獨特編碼」，在這邊儲存成一個 ""（空白的值）的 String，這樣聽起來有點饒舌，在這個地方設立變數，讓變數可以被任何function取用
-    // 比如說：某使用者UID是 "Avdfu12ejsiod9"<隨便亂取>，在Fuc SignUp_Button_Tapped 或 LogIn_Button_Tapped 的 self.uid = user.uid
-    // 前者 uid 即是指 「var uid = ""」的 uid，而後者的 uid 是指 「Firebase - Auth 的 使用者UID」
-    // 意思就是「將 Firebase-Auth 的 使用者UID」 儲存在 「var uid」中，因為 var 代表「變數」，最終就變成 var uid = "Avdfu12ejsiod9"
-    // 這樣，在我們需要使用者UID的時候（不論「從Firebase拿取資料」或是「從手機將資料放置到Firebase」皆需要用到）就可以輕易使用了！
+// uid 是「使用者的獨特編碼」，在這邊儲存成一個 "" ，沒有任何值的 String，這樣聽起來有點饒舌
+// 比如說：某使用者UID是 "Avdfu12ejsiod9"<隨便亂取>，在 SignUp_Button_Tapped 或 LogIn_Button_Tapped 
+// 有一串程式碼是 「self.uid = user.uid」
+// 前者 uid 即是指 「var uid = ""」的 uid，而後者的 uid 是指 「Firebase - Auth 的 使用者UID」
+// 意思就是「將Firebase使用者uid儲存愛變數uid中」，因為 var 代表「變數」，最終就變成 var uid = "Avdfu12ejsiod9"
+// 這樣，在我們需要使用者UID的時候（不論「從Firebase拿取資料」或是「從手機將資料放置到Firebase」皆需要用到）就可以輕易使用了！
     var uid = ""
 
 
@@ -413,6 +414,7 @@ class ChangeDataViewController: UIViewController {
 
 ## 按照步驟，就可以製作出一個連接Firebase的註冊系統囉！ ##
 
+如果需要完整版，請點[此][id2]開始下載。
 
 再回頭看一次，一開始所說的必學三件事都學會了沒：
 
