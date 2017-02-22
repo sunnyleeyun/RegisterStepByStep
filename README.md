@@ -420,14 +420,9 @@ class ChangeDataViewController: UIViewController {
 
 如果需要完整版(無任何備註)，請[點此][id2]開始下載。
 
-再回頭看一次，一開始所說的必學三件事都學會了沒：
+最後，我們回到[部落格][id1]做個總結。
 
-1. 在Firebase建立新帳號(LogInViewController)
-
-2. 從App存取資料到Firebase(SignUpViewController、ChangeDataViewController)
-
-3. 從Firebase拿取資料到App(ConfirmViewController、ChangeDataViewController)
 
 ---------------------------------------
 
-## 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，教學相長！ ##
+## P.S. 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，教學相長！ ##
