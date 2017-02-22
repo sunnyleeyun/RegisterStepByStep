@@ -1,7 +1,7 @@
 # RegisterStepByStep
 
 [id1]: http://sunnylee945.wixsite.com/leeyun/single-post/2017/02/21/Firebase%EF%BC%9A%E7%94%A8-Swift-%E5%BB%BA%E7%AB%8B%E3%80%8C%E8%A8%BB%E5%86%8A%E3%80%8D%E7%B3%BB%E7%B5%B1
-[id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal.zip
+[id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal/archive/master.zip
 
 
 #### Demo ####
@@ -418,7 +418,7 @@ class ChangeDataViewController: UIViewController {
 
 ## 按照步驟，就可以製作出一個連接Firebase的註冊系統囉！ ##
 
-如果需要完整版，請[點此][id2]開始下載。
+如果需要完整版(無任何備註)，請[點此][id2]開始下載。
 
 再回頭看一次，一開始所說的必學三件事都學會了沒：
 
