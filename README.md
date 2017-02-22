@@ -428,5 +428,6 @@ class ChangeDataViewController: UIViewController {
 
 3. 從Firebase拿取資料到App(ConfirmViewController、ChangeDataViewController)
 
+---------------------------------------
 
 ## 如果有任何問題或建議，歡迎到我的[技術部落格][id1]留言，教學相長！ ##
