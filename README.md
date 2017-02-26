@@ -111,7 +111,8 @@ class LogInViewController: UIViewController {
                         self.uid = user.uid
                 }
                     
-                    FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Safety-Check").setValue("ON")
+                    // Online-Status 是線上狀態，在點選「登入」按鈕後，將Online-Status設定為On
+                    FIRDatabase.database().reference(withPath: "Online-Status/\(self.uid)").setValue("ON")
                     
                     //跳到確認頁
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
