@@ -9,7 +9,7 @@
 
 
 
-### 註：Firebase與App的連結，以及ViewControllers的說明，請至[Firebase : 用Swift建立註冊系統][id1]，有詳盡步驟，以下只有單純就程式碼進行解釋喔！ ###
+### 註：Firebase與App的連結，以及ViewControllers的說明，請至[ Firebase : 用Swift建立註冊系統][id1]，有詳盡步驟，以下只有單純就程式碼進行解釋喔！ ###
 
 
 
