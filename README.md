@@ -1,6 +1,5 @@
 # Firebase：用Swift建立註冊系統 教學
 
-#### Demo ####
 
 [id1]: http://sunnylee945.wixsite.com/leeyun/single-post/2017/02/21/Firebase%EF%BC%9A%E7%94%A8-Swift-%E5%BB%BA%E7%AB%8B%E3%80%8C%E8%A8%BB%E5%86%8A%E3%80%8D%E7%B3%BB%E7%B5%B1
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal/archive/master.zip
