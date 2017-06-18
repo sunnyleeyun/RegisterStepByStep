@@ -3,7 +3,7 @@
 
 [id1]: http://sunnylee945.wixsite.com/leeyun/single-post/2017/02/21/Firebase%EF%BC%9A%E7%94%A8-Swift-%E5%BB%BA%E7%AB%8B%E3%80%8C%E8%A8%BB%E5%86%8A%E3%80%8D%E7%B3%BB%E7%B5%B1
 [id2]: https://github.com/sunnyleeyun/RegisterStepByStepFinal/archive/master.zip
-
+#### 這是 Starter Project，完整版請 [點此][id2] 下載 ####
 
 #### Demo ####
 [![Demo](https://i.ytimg.com/vi/7EtMUehTNto/1.jpg?time=1486976666492)](https://www.youtube.com/watch?v=7EtMUehTNto)
