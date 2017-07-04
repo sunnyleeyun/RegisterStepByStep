@@ -7,8 +7,7 @@
 ### 這是 Starter Project，完整版請 [點此][id2] 下載 ###
 
 #### Demo ####
-[![Demo](https://i.ytimg.com/vi/7EtMUehTNto/1.jpg?time=1486976666492)](https://www.youtube.com/watch?v=7EtMUehTNto)
-
+![firebase demo](https://user-images.githubusercontent.com/20850892/27823727-b9385a38-60dc-11e7-91e0-d0df7d52707f.gif)
 
 
 ### 註：完整說明，請至[ Firebase : 用Swift建立註冊系統 ][id1] ###
