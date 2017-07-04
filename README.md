@@ -10,4 +10,4 @@
 ![firebase demo](https://user-images.githubusercontent.com/20850892/27823727-b9385a38-60dc-11e7-91e0-d0df7d52707f.gif)
 
 
-### 註：完整說明，請至[ Firebase : 用Swift建立註冊系統 ][id1] ###
+### 註：完整說明，請至Sunny的技術部落格 [ Swift：一次學會Firebase的開發者三大重點 — Authentication、Database、Storage ][id1] ###
