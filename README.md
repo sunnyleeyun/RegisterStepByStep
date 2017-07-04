@@ -6,7 +6,7 @@
 
 ### 這是 Starter Project，完整版請 [點此][id2] 下載 ###
 ### This is the Starter Project，press [this][id2] to download the final project. ###
-
+-----------
 #### Demo ####
 ![firebase demo](https://user-images.githubusercontent.com/20850892/27823727-b9385a38-60dc-11e7-91e0-d0df7d52707f.gif)
 
